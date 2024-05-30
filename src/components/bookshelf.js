@@ -7,7 +7,7 @@ const Bookshelf = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/books')
+        axios.get(`http://localhost:8000/bookapp/api/books/`)
             .then(response => {
                 setBooks(response.data);
                 setLoading(false);
@@ -16,7 +16,7 @@ const Bookshelf = () => {
                 setError(error.message);
                 setLoading(false);
             });
-    }, []);
+    });
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
