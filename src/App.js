@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Mylibrary from './pages/mylibrary/mylibrary';
+import Bookshelf from './pages/bookshelves/bookshelf';
 import SearchBooks from './pages/searchbooks/searchbooks';
 import EditBook from './pages/bookshelves/editbook';
 import AddBook from './pages/bookshelves/addbook';
@@ -36,6 +37,7 @@ const App = () => {
                 <div className="content" style={{ marginLeft: sidebarVisible ? '200px' : '80px' }}>
                     <Routes>
                         <Route path="/my-library" element={<Mylibrary />} />
+                        <Route path="/booksehlf" element={<Bookshelf />} />
                         <Route path="/search-books" element={<SearchBooks />} />
                         <Route path="/edit-book" element={<EditBook />} />
                         <Route path="/add-book" element={<AddBook />} />

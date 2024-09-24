@@ -2,6 +2,10 @@ import React from 'react';
 import './bookshelfFull.css';
 
 const BookshelfFull = ({ data }) => {
+    if (!data || data.length === 0) {
+        return <p>No books available.</p>;  // Fallback if there is no data
+    }
+
     return (
         <div className="bookshelfContainer">
             <div className="bookshelfTable">
@@ -21,3 +25,4 @@ const BookshelfFull = ({ data }) => {
 };
 
 export default BookshelfFull;
+

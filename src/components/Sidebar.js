@@ -10,6 +10,7 @@ const Sidebar = ({ toggleTheme, isDarkMode }) => {
             <ul>
                 <li><Link to="/search-books">Book Search</Link></li>
                 <li><Link to="/my-library">My Library</Link></li>
+                <li><Link to="/booksehlf">Bookshelf</Link></li>
                 <li><Link to="/edit-book">editbook</Link></li>
                 <li><Link to="/add-book">addbook</Link></li>
                 <li><Link to="/FullWidth">FullWidth</Link></li>
