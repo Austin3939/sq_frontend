@@ -10,7 +10,7 @@ const BookshelfFull = ({ data }) => {
         <div className="bookshelfContainer">
             <div className="bookshelfTable">
                 {data.map(book => (
-                    <div key={book.userbookdataid} className="bookHolder">
+                    <div key={book.userbookid} className="bookHolder">
                         <img src={book.bookid.cover} alt={book.bookid.title} />
                         <div>
                             <h2>{book.bookid.title}</h2>
