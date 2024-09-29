@@ -49,6 +49,7 @@ const SearchBooks = () => {
             console.log('Book saved:', response.data);
         } catch (error) {
             console.error('There was an error saving the book!', error);
+            alert('Book failed to be added to bookshelf!');
         }
     };
 
@@ -74,14 +75,20 @@ const SearchBooks = () => {
                     <div className="buttonContainer">
                         <button
                             className="button"
-                            onClick={() => handleButtonClick(book, '6')}>
-                            Read
-                        </button>
-                        <button
-                            className="button"
                             onClick={() => handleButtonClick(book, '5')}>
                             TBR
                         </button>
+                        <button
+                            className="button"
+                            onClick={() => handleButtonClick(book, '4')}>
+                            Reading
+                        </button>
+                        <button
+                            className="button"
+                            onClick={() => handleButtonClick(book, '6')}>
+                            Read
+                        </button>
+                        
                         <button
                             className="button"
                             onClick={() => handleButtonClick(book, '7')}>

@@ -6,6 +6,7 @@ import Bookshelf from './pages/bookshelves/bookshelf';
 import SearchBooks from './pages/searchbooks/searchbooks';
 import EditBook from './pages/bookshelves/editbook';
 import AddBook from './pages/bookshelves/addbook';
+import UserBookData from './pages/bookdata/userbookdata';
 import FullWidth from './Test/FullWidth';
 import TwoColumns from './Test/TwoColumns';
 import './App.css';
@@ -41,6 +42,7 @@ const App = () => {
                         <Route path="/search-books" element={<SearchBooks />} />
                         <Route path="/edit-book" element={<EditBook />} />
                         <Route path="/add-book" element={<AddBook />} />
+                        <Route path="/user-book-data" element={<UserBookData />} />
                         <Route path="/FullWidth" element={<FullWidth />} />
                         <Route path="/TwoColumns" element={<TwoColumns />} />
                         {/* Add more routes as needed */}
