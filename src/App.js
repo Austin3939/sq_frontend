@@ -42,9 +42,10 @@ const App = () => {
                         <Route path="/search-books" element={<SearchBooks />} />
                         <Route path="/edit-book" element={<EditBook />} />
                         <Route path="/add-book" element={<AddBook />} />
-                        <Route path="/user-book-data" element={<UserBookData />} />
+                        <Route path="/user-book-data/:userbookid" element={<UserBookData />} />
                         <Route path="/FullWidth" element={<FullWidth />} />
                         <Route path="/TwoColumns" element={<TwoColumns />} />
+                        <Route path="/move-book/:userbookid" element={<Bookshelf />} />
                         {/* Add more routes as needed */}
                     </Routes>
                 </div>

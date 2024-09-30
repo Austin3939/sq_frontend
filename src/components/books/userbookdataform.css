@@ -1,0 +1,55 @@
+.form-input[type="range"] {
+    -webkit-appearance: none; /* Remove default styling in WebKit browsers */
+    appearance: none; /* Remove default styling in modern browsers */
+    width: 100%; /* Full width */
+    height: 2px; /* Slider height */
+    background: #000000; /* Background color */
+    border-radius: 5px; /* Rounded edges */
+    margin: 0; /* Remove margin if needed */
+    padding: 0; /* Remove padding for the range input */
+  }
+  
+  .form-input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none; /* Remove default styling */
+    width: 20px; /* Thumb width */
+    height: 20px; /* Thumb height */
+    border-radius: 20%; /* Round thumb */
+    background: #000000; /* Thumb color */
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+  .form-input[type="range"]::-moz-range-thumb {
+    width: 20px; /* Thumb width */
+    height: 20px; /* Thumb height */
+    border-radius: 50%; /* Round thumb */
+    background: #000000; /* Thumb color */
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+  .form-input[type="range"]::-ms-thumb {
+    width: 20px; /* Thumb width */
+    height: 20px; /* Thumb height */
+    border-radius: 50%; /* Round thumb */
+    background: #000000; /* Thumb color */
+    cursor: pointer; /* Change cursor on hover */
+  }
+
+  .bookshelfTable {
+    display: flex;
+    flex-wrap: wrap; /* This will allow the divs to wrap to the next line */
+    gap: 20px; /* Adds spacing between the divs */
+    margin-bottom: 40px;
+}
+
+.bookHolder {
+    display: flex;
+    align-items: center;
+    width: 300px; /* Adjust the width as needed */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    color: #000000;
+}

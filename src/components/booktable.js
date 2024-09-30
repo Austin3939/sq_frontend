@@ -23,18 +23,18 @@ const Bookshelf = () => {
     }, []); // Runs once when the component mounts
 
     // Define the handleBookClick function
-    const handleBookClick = async (userbookdataid) => {
+    const handleBookClick = async (userbookid) => {
         try {
             // Fetch the specific book data based on userbookdataid
-            const response = await axios.get('http://127.0.0.1:8000/bookapp/api/userbooks/', {
-                params: { bookid: userbookdataid },  // Pass the clicked userbookdataid
+            const response = await axios.get('http://127.0.0.1:8000/bookapp/api/userbookdata/', {
+                params: { userbookid: userbookid },  // Pass the clicked userbookdataid
                 withCredentials: true
             });
             
             console.log('Selected book data:', response.data);
 
             // Navigate to the UserBookData route and pass the book data
-            navigate('/user-book-data', { state: { bookData: response.data } });
+            navigate(`/user-book-data/${userbookid}`, { state: { bookData: response.data } });
         } catch (error) {
             console.error('Error fetching book:', error.response ? error.response.data : error.message);
         }
@@ -53,7 +53,7 @@ const Bookshelf = () => {
                 </thead>
                 <tbody>
                     {books.map(book => (
-                        <tr key={book.userbookdataid} onClick={() => handleBookClick(book.userbookdataid)}>
+                        <tr key={book.userbookid} onClick={() => handleBookClick(book.userbookid)}>
                             <td className="td">
                                 <img src={book.bookid.cover} alt={book.bookid.title} className="img" />
                             </td>
