@@ -1,0 +1,33 @@
+.pagecontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    padding: 20px;
+}
+
+.bookdiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+    width: 50%; 
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #000000;
+}
+
+.titleHeader {
+    margin: 10px 10px 10px 10px;
+}
+
+  .pageContent {
+    flex: 1;          
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    min-width: 300px;       
+  }

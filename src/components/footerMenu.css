@@ -1,0 +1,42 @@
+/* FooterMenu.css */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ccc;
+  }
+  
+  .footer-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .footer-button span {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  
+  .icon {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .footer-button:hover .icon {
+    color: #29ad34; /* Change icon color on hover */
+  }
+  
+  .footer-button:hover span {
+    color: #29ad34; /* Change text color on hover */
+  }
+  

@@ -1,0 +1,64 @@
+.tableContainer {
+        padding: 10px;
+    }
+
+    .bookRow {
+        display: flex;
+        flex-wrap: wrap; /* Allows images to wrap to the next line */
+        gap: 2px; /* Spacing between images */
+        padding: 0px;
+      }
+      
+    .img {
+        width: 100px; /* Adjust the image size */
+        height: auto;
+        border-radius: 5px;
+    }
+    .bookItem {
+        cursor: pointer; /* Changes cursor on hover */
+        width: 100px;
+      }
+    
+    .finalColumn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .infoBox {
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px; /* Rounded corners */
+        background-color: #f9f9f9;
+        width: 100%;
+    }
+
+    .userData {
+        padding: none;
+        font-size: .8rem;
+        line-height: .3rem;
+    }
+
+    .filterButton {
+        background-color: transparent;
+        border: none;
+        color: #000000; /* Optional: Text color for the button */
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .filterContainer {
+        width: 100%;
+        display: flex; /* or grid, depending on your layout */
+        flex-direction: row; /* Ensures the filter items are stacked vertically */
+        gap: 15px; /* Adds 15px of space between each item */
+    }
+
+    .clearFilter {
+        width: 100px;
+        background-color: transparent;
+        border: none;
+        color: #000000; /* Optional: Text color for the button */
+        font-size: 16px;
+        cursor: pointer;
+    }
