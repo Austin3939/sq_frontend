@@ -9,6 +9,38 @@ const BookshelfFull = ({ data }) => {
     const [selectedBookshelf, setSelectedBookshelf] = useState({});
     const { userbookid } = useParams(); // Get userbookid from the route params
     const navigate = useNavigate(); // Hook for navigation
+    const [startDate, setStartDate] = useState('');
+    const [endDate, setEndDate] = useState('');
+    const [authorFilter, setAuthorFilter] = useState('');
+    const [ratingFilter, setRatingFilter] = useState('');
+
+    const [showFilters, setShowFilters] = useState(false);
+    const filterBooks = (book) => {
+        // Filter by start date
+        if (startDate && new Date(book.startdate) < new Date(startDate)) return false;
+
+        // Filter by end date
+        if (endDate && new Date(book.finishdate) > new Date(endDate)) return false;
+
+        // Filter by author
+        if (authorFilter && !book.bookid.author.toLowerCase().includes(authorFilter.toLowerCase())) return false;
+
+        // Filter by rating
+        if (ratingFilter && book.rating !== parseInt(ratingFilter)) return false;
+
+        return true;
+    };
+
+    const clearFilters = () => {
+        setStartDate('');
+        setEndDate('');
+        setAuthorFilter('');
+        setRatingFilter('');
+    };
+
+    const toggleFilters = () => {
+        setShowFilters(!showFilters);
+    };
 
     useEffect(() => {
         // Fetch bookshelves when the component mounts
@@ -77,8 +109,53 @@ const BookshelfFull = ({ data }) => {
     
     return (
         <div className="bookshelfContainer">
+            <button onClick={toggleFilters} className="filterButton">
+                Filter {showFilters ? '▲' : '▼'}
+            </button>
+            {/* Filter Toggle */}
+            {showFilters && (
+                <div className="filterContainer">
+                    <label>
+                        Start Date:&nbsp;
+                        <input
+                            type="date"
+                            value={startDate}
+                            onChange={(e) => setStartDate(e.target.value)}
+                        />
+                    </label>
+                    <label>
+                        End Date:&nbsp;
+                        <input
+                            type="date"
+                            value={endDate}
+                            onChange={(e) => setEndDate(e.target.value)}
+                        />
+                    </label>
+                    <label>
+                        Author:&nbsp;
+                        <input
+                            type="text"
+                            value={authorFilter}
+                            onChange={(e) => setAuthorFilter(e.target.value)}
+                            placeholder="Enter author name"
+                        />
+                    </label>
+                    <label>
+                        Rating:&nbsp;
+                        <input
+                            type="number"
+                            value={ratingFilter}
+                            onChange={(e) => setRatingFilter(e.target.value)}
+                            placeholder="1-5"
+                            min="0"
+                            max="5"
+                        />
+                    </label>
+                    <button className="clearFilter" onClick={clearFilters}>Clear Filters</button>
+                </div>
+            )}
             <div className="bookshelfTable">
-                {data.map(book => (
+                {data.filter((book) => filterBooks(book)).map(book => (
                     <div key={book.userbookid} className="bookHolder">
                         <img src={book.bookid.cover} alt={book.bookid.title} />
                         <div>

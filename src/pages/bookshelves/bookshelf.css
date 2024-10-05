@@ -1,0 +1,11 @@
+select#bookshelfFilter {
+    background: none;
+    border: none;
+    outline: none; /* Remove focus outline */
+    color: inherit; /* Ensures the text color remains consistent */
+    font-size: inherit; /* Ensures it inherits the font size */
+    padding: 0px; /* Optional: Adjust the padding */
+    cursor: pointer; /* Optional: Change the cursor to indicate it's clickable */
+    font-size: 20px;
+    width: 100px;
+}

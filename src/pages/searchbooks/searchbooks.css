@@ -12,11 +12,11 @@
     justify-content: left; /* Horizontally centers the content inside each bookdiv */
     padding: 0px;
     margin: 0px;
-    width: 50%;
+    width: 60%;
     border: 1px solid #ddd;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background: #00000011;
 }
 
 .bookContent {
@@ -34,7 +34,7 @@
 
 .bookDetails {
     flex: 1;
-    width: 50%;
+    width: 100%;
 }
 
 .title {
@@ -46,10 +46,12 @@
 }
 
 .buttonContainer {
-    margin-top: 0px;
-    /* display: flex; */
+    margin-left: 10px;
     justify-content: right;
     width: 40%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 .button {
@@ -77,7 +79,7 @@
     display: flex;
     flex-direction: column;
     width: 100%; 
-    padding: 20px;
+    padding: 0px;
 }
 
 .bookdiv {
@@ -88,23 +90,12 @@
     padding: 20px;
     margin: 10px;
     width: 50%; 
-    border: 1px solid #ddd;
+    border: 0px solid #ddd;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 .titleHeader {
     margin: 10px 10px 10px 10px;
 }
-
-  .pageContent {
-    flex: 1;          
-    padding: 10px;
-    margin: 10px;
-    /*background-color: #f0f0f0;*/
-    border-radius: 8px;
-    box-sizing: border-box;
-    min-width: 300px;        
-  }
-  

@@ -8,7 +8,7 @@ import EditBook from './pages/bookshelves/editbook';
 import AddBook from './pages/bookshelves/addbook';
 import UserBookData from './pages/bookdata/userbookdata';
 import FullWidth from './Test/FullWidth';
-import TwoColumns from './Test/TwoColumns';
+import FooterMenu from './components/footerMenu';
 import './App.css';
 
 
@@ -28,14 +28,15 @@ const App = () => {
     
     return (
         <Router>
-            <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`} style={{ minHeight: '100vh' }}>
+            <div>
+                {/* <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`} style={{ minHeight: '100vh' }}>
                 <button className="hamburger-icon" onClick={toggleSidebar}>
                     &#9776;
                 </button>
                 {sidebarVisible && (
                     <Sidebar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-                )}
-                <div className="content" style={{ marginLeft: sidebarVisible ? '200px' : '80px' }}>
+                )}*/}
+                <div className="content">
                     <Routes>
                         <Route path="/my-library" element={<Mylibrary />} />
                         <Route path="/booksehlf" element={<Bookshelf />} />
@@ -44,11 +45,11 @@ const App = () => {
                         <Route path="/add-book" element={<AddBook />} />
                         <Route path="/user-book-data/:userbookid" element={<UserBookData />} />
                         <Route path="/FullWidth" element={<FullWidth />} />
-                        <Route path="/TwoColumns" element={<TwoColumns />} />
                         <Route path="/move-book/:userbookid" element={<Bookshelf />} />
                         {/* Add more routes as needed */}
                     </Routes>
                 </div>
+                <FooterMenu />
             </div>
         </Router>
     );
