@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import BookshelfFull from '../../components/books/bookshelfFull';
+import BookshelfFull from '../../components/Web/bookshelfFull';
 import '../../Test/FullWidth.css';
 import '../bookshelves/bookshelf.css';
 
