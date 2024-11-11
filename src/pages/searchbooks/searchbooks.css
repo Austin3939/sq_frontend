@@ -23,6 +23,10 @@
     display: blox;
 }
 
+.search-div {
+    text-align: center;
+    margin: 10px;
+}
 .img {
     width: 100px;
     height: 150px;
@@ -43,15 +47,6 @@
 
 .author {
     margin: 0 0 5px 0;
-}
-
-.buttonContainer {
-    margin-left: 10px;
-    justify-content: right;
-    width: 40%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
 }
 
 .button {

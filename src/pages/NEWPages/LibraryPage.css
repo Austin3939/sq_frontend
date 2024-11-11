@@ -1,0 +1,9 @@
+.content-header {
+    text-align: left;
+    padding-left: 20px;
+    color: #2f2f2f;
+    font-weight: 300;
+    cursor: pointer;
+    margin: 0px;
+    text-decoration-line: underline;
+}

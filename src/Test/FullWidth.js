@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './FullWidth.css';
-import Banner from '../components/banner';
+import Banner from '../components/Web/banner';
 
 
 const FullWidth = () => {

@@ -1,5 +1,6 @@
 // src/components/Sidebar.js
 import React from 'react';
+import './webstyles.css';
 
 const Banner = () => {
     return (
