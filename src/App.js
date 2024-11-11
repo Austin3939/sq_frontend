@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Web/Sidebar';
 import Mylibrary from './pages/NEWPages/LibraryPage';
 import Bookshelf from './pages/bookshelves/bookshelf';
-import SearchBooks from './pages/SearchBooks/SearchBooks';
+import SearchBooks from './pages/SearchBooks/searchbooks';
 import EditBook from './pages/bookshelves/editbook';
 import AddBook from './pages/bookshelves/addbook';
 import UserBookData from './pages/bookdata/userbookdata';
