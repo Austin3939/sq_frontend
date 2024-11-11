@@ -13,7 +13,7 @@ const SearchBooks = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/bookapp/api/searchbooks/', {
+        const response = await axios.get('http://127.0.0.1:8000/bookapp/api/SearchBooks/', {
           params: { query },
         });
         setBooks(response.data);
