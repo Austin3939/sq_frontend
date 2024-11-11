@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import BookshelfFull from '../../components/BookshelfFull';
+import BookshelfFull from '../../components/Books/bookshelfFull';
 import '../../Test/FullWidth.css';
 import '../bookshelves/bookshelf.css';
 
@@ -47,7 +47,7 @@ const Bookshelf = () => {
 
     return (
         <div className="pagecontainer">
-                <select id="bookshelfFilter" value={selectedBookshelf} onChange={handleFilterChange}>
+                <select id="bookshelfFilter" className="bookshelfFilter" value={selectedBookshelf} onChange={handleFilterChange}>
                     <option value="">Select</option>
                     {bookshelves.map((shelf) => (
                         <option key={shelf.id} value={shelf.name}>

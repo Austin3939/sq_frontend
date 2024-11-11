@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './formstyle.css';
-import './userbookdataform.css';
+import './bookstyles.css';
 
 const UserBookDataForm = () => {
   const { userbookid } = useParams(); // Get the userbookid from the URL
@@ -99,8 +98,8 @@ const UserBookDataForm = () => {
   
   return (
     <div className="form-container">
-      <div className="bookshelfTable">
-        <div key={data.userbookid} className="bookHolder">
+      <div className="bookshelf-table">
+        <div key={data.userbookid} className="book-holder">
           {data.bookid && <img src={data.bookid.cover} alt={data.bookid.title} />} {/* Check if bookid exists */}
           <div>
             <h2>{data.bookid ? data.bookid.title : 'Title not available'}</h2>

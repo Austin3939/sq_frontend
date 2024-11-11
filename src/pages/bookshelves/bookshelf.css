@@ -1,4 +1,4 @@
-select#bookshelfFilter {
+.bookshelfFilter {
     background: none;
     border: none;
     outline: none; /* Remove focus outline */

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import BookTable from '../../components/booktable';
+import HeaderContent from '../../components/headercontent';
 import '../../Test/FullWidth.css';
 
 const MyLibrary = () => {
@@ -25,6 +26,9 @@ const MyLibrary = () => {
 
     return (
     <div className="pagecontainer">
+        <div>
+            <HeaderContent />
+        </div>
         <h1>My Library</h1>
         <div className="pageContent">
             <BookTable />

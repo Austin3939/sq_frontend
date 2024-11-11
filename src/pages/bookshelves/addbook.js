@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import NewBookForm from '../../components/books/newbookform';
+import NewBookForm from '../../components/Books/newbookform';
 import './editbook.css';
 
 const EditBook = () => {

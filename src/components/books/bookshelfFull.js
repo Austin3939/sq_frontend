@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom'; // Import necessary hooks
-import './bookshelfFull.css';
+import './bookstyles.css';
 
 const BookshelfFull = ({ data }) => {
     const [bookshelves, setBookshelves] = useState([]);
@@ -109,7 +109,7 @@ const BookshelfFull = ({ data }) => {
     
     return (
         <div className="bookshelfContainer">
-            <button onClick={toggleFilters} className="filterButton">
+            <button onClick={toggleFilters} className="bookshelfFilter">
                 Filter {showFilters ? '▲' : '▼'}
             </button>
             {/* Filter Toggle */}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';  // To get book ID from URL params
+import './bookstyles.css';
 
 const EditBookForm = () => {
   const { bookId } = useParams(); // Assuming you're passing bookId via URL

@@ -1,14 +1,14 @@
 import React, { useState, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
-import Mylibrary from './pages/mylibrary/mylibrary';
+import Sidebar from './components/Web/Sidebar';
+import Mylibrary from './pages/NEWPages/LibraryPage';
 import Bookshelf from './pages/bookshelves/bookshelf';
-import SearchBooks from './pages/searchbooks/searchbooks';
+import SearchBooks from './pages/SearchBooks/SearchBooks';
 import EditBook from './pages/bookshelves/editbook';
 import AddBook from './pages/bookshelves/addbook';
 import UserBookData from './pages/bookdata/userbookdata';
 import FullWidth from './Test/FullWidth';
-import FooterMenu from './components/footerMenu';
+import FooterMenu from './components/Web/footerMenu';
 import './App.css';
 
 
@@ -36,7 +36,7 @@ const App = () => {
                 {sidebarVisible && (
                     <Sidebar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
                 )}*/}
-                <div className="content">
+                <div className="content app-content">
                     <Routes>
                         <Route path="/my-library" element={<Mylibrary />} />
                         <Route path="/booksehlf" element={<Bookshelf />} />

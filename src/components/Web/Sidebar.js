@@ -1,7 +1,7 @@
 // src/components/Sidebar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Sidebar.css';
+import './webstyles.css';
 
 const Sidebar = ({ toggleTheme, isDarkMode }) => {
     return (
