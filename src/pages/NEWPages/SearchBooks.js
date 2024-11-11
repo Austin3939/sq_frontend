@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './searchbooks.css';
-import SearchBookCard from '../../components/books/SearchBookCard'; 
+import SearchBookCard from '../../components/Web/searchbookcard'; 
 
 axios.defaults.xsrfHeaderName = 'X-CSRFToken';
 axios.defaults.xsrfCookieName = 'csrftoken';

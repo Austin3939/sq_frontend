@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import HeaderContent from '../../components/Web/headercontent';
 import { useNavigate } from 'react-router-dom';
-import BookCard from '../../components/books/bookcard';
+import BookCard from '../../components/Web/bookcard';
 import './LibraryPage.css';
 
 const Books = () => {
